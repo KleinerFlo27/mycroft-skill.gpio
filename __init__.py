@@ -46,7 +46,7 @@ class GPIOSkill(MycroftSkill):
 
     @intent_handler(IntentBuilder('LichtAn')
                     .require('LichtAnKeyword'))
-    def handle_hallo_klaus_intent(self, message):
+    def handle_licht_an_intent(self, message):
         GPIO.output(17,True)
         GPIO.output(27,True)
         GPIO.output(22,True)
@@ -54,7 +54,7 @@ class GPIOSkill(MycroftSkill):
 
      @intent_handler(IntentBuilder('LichtAus')
                     .require('LichtAusKeyword'))
-    def handle_hallo_klaus_intent(self, message):
+    def handle_licht_aus_intent(self, message):
         GPIO.output(17,False)
         GPIO.output(27,False)
         GPIO.output(22,False)
@@ -62,7 +62,7 @@ class GPIOSkill(MycroftSkill):
 
     @intent_handler(IntentBuilder('gruenesLichtAn')
                     .require('gruenesLichtAnKeyword'))
-    def handle_hallo_klaus_intent(self, message):
+    def handle_gruenes_Licht_an_intent(self, message):
         GPIO.output(17,True)
         self.speak_dialog("gruenesLichtAn")
 
