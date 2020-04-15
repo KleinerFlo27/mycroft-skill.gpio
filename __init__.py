@@ -69,6 +69,7 @@ class GPIOSkill(MycroftSkill):
     def stop(self):
         pass
 
+    
 
 def create_skill():
     return GPIOSkill()
