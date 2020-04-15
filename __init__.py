@@ -50,7 +50,7 @@ class GPIOSkill(MycroftSkill):
         GPIO.output(17,True)
         GPIO.output(27,True)
         GPIO.output(22,True)
-        self.speak_dialog("LichtAN")
+        self.speak_dialog("LichtAn")
 
      @intent_handler(IntentBuilder('LichtAus')
                     .require('LichtAusKeyword'))
