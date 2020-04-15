@@ -63,6 +63,31 @@ class GPIOSkill(MycroftSkill):
         GPIO.output(17,True)
         self.speak_dialog("gruenesLichtAn")
 
+    @intent_handler(IntentBuilder('gruenesLichtAus').require('gruenesLichtAusKeyword'))
+    def handle_gruenes_Licht_aus_intent(self, message):
+        GPIO.output(17,False)
+        self.speak_dialog("gruenesLichtAus")
+
+    @intent_handler(IntentBuilder('blauesLichtAn').require('blauesLichtAnKeyword'))
+    def handle_blaues_Licht_an_intent(self, message):
+        GPIO.output(22,True)
+        self.speak_dialog("blauesLichtAn")
+
+    @intent_handler(IntentBuilder('blauesLichtAus').require('blauesLichtAusKeyword'))
+    def handle_blaues_Licht_aus_intent(self, message):
+        GPIO.output(22,False)
+        self.speak_dialog("blauesLichtAus")
+
+    @intent_handler(IntentBuilder('orangesLichtAn').require('orangesLichtAnKeyword'))
+    def handle_oranges_Licht_an_intent(self, message):
+        GPIO.output(27,True)
+        self.speak_dialog("orangesLichtAn")
+
+    @intent_handler(IntentBuilder('orangesLichtAus').require('orangesLichtAusKeyword'))
+    def handle_oranges_Licht_aus_intent(self, message):
+        GPIO.output(27,False)
+        self.speak_dialog("orangesLichtAus")
+
     def stop(self):
         pass
 
