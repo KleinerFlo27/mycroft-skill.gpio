@@ -44,24 +44,21 @@ class GPIOSkill(MycroftSkill):
         settings will be available."""
         my_setting = self.settings.get('my_setting')
 
-    @intent_handler(IntentBuilder('LichtAn')
-                    .require('LichtAnKeyword'))
+    @intent_handler(IntentBuilder('LichtAn').require('LichtAnKeyword'))
     def handle_licht_an_intent(self, message):
         GPIO.output(17,True)
         GPIO.output(27,True)
         GPIO.output(22,True)
         self.speak_dialog("LichtAn")
 
-     @intent_handler(IntentBuilder('LichtAus')
-                    .require('LichtAusKeyword'))
+     @intent_handler(IntentBuilder('LichtAus').require('LichtAusKeyword'))
     def handle_licht_aus_intent(self, message):
         GPIO.output(17,False)
         GPIO.output(27,False)
         GPIO.output(22,False)
         self.speak_dialog("LichtAus")
 
-    @intent_handler(IntentBuilder('gruenesLichtAn')
-                    .require('gruenesLichtAnKeyword'))
+    @intent_handler(IntentBuilder('gruenesLichtAn').require('gruenesLichtAnKeyword'))
     def handle_gruenes_Licht_an_intent(self, message):
         GPIO.output(17,True)
         self.speak_dialog("gruenesLichtAn")
